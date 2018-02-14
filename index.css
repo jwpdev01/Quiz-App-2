@@ -4,6 +4,33 @@
    box-sizing: border-box;
  }
 
+ /* Set a base */
+ html {font-size: 62.5%}
+
+ /* iPhone landscape range */
+
+ @media (min-width:321px) and (max-width:480px) {
+   html {
+     font-size: 1.2em
+   }
+ }
+
+ /* larger than iPhone landscape, an in the iPad portrait range */
+
+ @media (min-width:481px) and (max-width:768px) {
+   html {
+     font-size: 1.6em
+   }
+ }
+
+ /* bigger than iPad portrait  */
+
+ @media (min-width:769px) {
+   html {
+     font-size: 2em
+   }
+ }
+
  body {
    font-family: 'Roboto', sans-serif;
    color: #67655D;
@@ -42,7 +69,6 @@
  nav {
    top: 0;
    height: 90px;
-   font-size: 24px;
    font-weight: bold;
    padding: 30px;
  }
@@ -50,7 +76,6 @@
  footer {
    bottom: 0;
    height: 35px;
-   font-size: 12px;
    padding: 10px 20px;
  }
 
@@ -82,7 +107,6 @@
    border: none;
    background-color: #577592;
    color: #ffffff;
-   font-size: 18px;
    text-transform: uppercase;
    border-radius: 5px;
    cursor: pointer;
@@ -96,11 +120,10 @@
    color: #aa9a66
  }
 
-  .quiz-final,
-  .start-screen {
+ .quiz-final,
+ .start-screen {
    margin: 0 auto;
    text-align: center;
-   font-size: 24px;
    width: 100%;
  }
 
@@ -113,23 +136,22 @@
    padding: 20px;
    background-color: #D4D8D1;
    font-weight: bold;
-}
+ }
 
  label:hover,
  label:focus {
    background-color: wheat;
  }
 
-:checked+span {
-  color: #B74934;
-  font-weight: bold;
-  font-size: 2.5em;
+ :checked+span {
+   color: #B74934;
+   font-weight: bold;
  }
 
- .quiz-question,
+ /* .quiz-question,
  .quiz-answer {
    font-size: 20px;
- }
+ }*/
 
  .quiz-answer {
    text-align: left;
@@ -141,9 +163,9 @@
    background-color: #332C2F;
    color: #ebca52
  }
- 
+
  .final-score {
-   font-size: 5em;
+   font-size: small;
  }
 
  .red-text {
@@ -158,7 +180,6 @@
    background-color: white;
    border: 10px solid #67655d;
    color: black;
-   font-size: 2em;
  }
 
  .ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close {
