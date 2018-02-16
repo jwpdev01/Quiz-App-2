@@ -11,8 +11,8 @@
  }
 
  /* iPhone landscape range */
- @media (min-width:321px) and (max-width:480px) {
-   html {font-size: 1.2em}
+ @media (min-width:px) and (max-width:480px) {
+   html {font-size: 1.0 em}
    nav {height: 50px;}
    nav ul>li {margin-right: 30px}
    .hide-under-400px { display: none; }  /* show it on small screens */
@@ -99,7 +99,7 @@
  }
 
  main {
-   margin: 110px auto;
+   margin: 80px auto;
  }
 
  button {
@@ -133,7 +133,7 @@
    width: 100%;
    margin-top: 10px;
    margin-bottom: 10px;
-   padding: 0px;
+   padding: 10px;
    background-color: #D4D8D1;
    font-weight: bold;
  }
