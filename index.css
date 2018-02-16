@@ -11,7 +11,7 @@
  }
 
  /* iPhone landscape range */
- @media (min-width:px) and (max-width:480px) {
+ @media (min-width:0px) and (max-width:480px) {
    html {font-size: 1.0 em}
    nav {height: 50px;}
    nav ul>li {margin-right: 30px}
