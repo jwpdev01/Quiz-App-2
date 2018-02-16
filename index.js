@@ -35,8 +35,23 @@ function displayDiaglogBox() {
         //update the number of correct answers and what question the user is on
         updateQuizCountAndCorrectAnswerCount(answerStatus)
 
+
+        $('.js-quiz').html(
+            `
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                     ${setDialogText(answerStatus)}
+                     <button class='next'>Next Question</button>
+                </div>
+                <div>
+                    
+                </div>
+            </div>
+            `
+         )
+
         //load correct graphic for correct or incorrect answer
-        $('#dialog').append(loadDialogGraphics(answerStatus));
+        /*$('#dialog').append(loadDialogGraphics(answerStatus));
 
         //dialog that displays correct and incorrect and navigates to the next step in the workflow.
         $("#dialog").dialog({
@@ -63,7 +78,7 @@ function displayDiaglogBox() {
                     }
                 }
             }
-        });
+        }); */
     });
 }
 
@@ -158,11 +173,12 @@ function setDialogText(answer) {
         dialogText = [`Sorry, that was incorrect.  The correct answer is: "<span class='red-text'>${QUIZ[QUIZSTATE.getQuestionNumber()].correctAnswer}</span>"<br/>`];
     }
 
-    $('.js-dialog').html(`
+    return dialogText;
+    /*$('.js-dialog').html(`
         <div id="dialog" title="Basic dialog">
             <p>${dialogText}</p>
         </div>`);
-
+    */
 }
 
 //initate and start the quiz

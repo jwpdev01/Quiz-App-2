@@ -1,4 +1,3 @@
-<<<<<<< HEAD
  * {
    margin: 0;
    padding: 0;
@@ -6,30 +5,31 @@
  }
 
  /* Set a base */
- html {font-size: 62.5%}
+
+ html {
+   font-size: 62.5%
+ }
 
  /* iPhone landscape range */
-
  @media (min-width:321px) and (max-width:480px) {
-   html {
-     font-size: 1.2em
-   }
+   html {font-size: 1.2em}
+   nav {height: 50px;}
+   nav ul>li {margin-right: 30px}
+   .hide-under-400px { display: none; }  /* show it on small screens */
  }
 
  /* larger than iPhone landscape, an in the iPad portrait range */
-
  @media (min-width:481px) and (max-width:768px) {
-   html {
-     font-size: 1.6em
-   }
+   html {font-size: 1.6em}
+   nav {height: 60px;}
+   nav ul>li {margin-right: 15px}
  }
 
  /* bigger than iPad portrait  */
-
  @media (min-width:769px) {
-   html {
-     font-size: 2em
-   }
+   html {font-size: 2em;}
+   nav {height: 60px;}
+   nav ul>li {margin-right: 15px}
  }
 
  body {
@@ -69,18 +69,17 @@
 
  nav {
    top: 0;
-   height: 90px;
    font-weight: bold;
-   padding: 30px;
+   padding: 10px;
  }
 
  footer {
    bottom: 0;
-   height: 35px;
+   height: 50px;
    padding: 10px 20px;
  }
 
- quiz-title {
+ .quiz-title {
    display: inline-block;
    margin: 0;
    padding: 0;
@@ -92,7 +91,7 @@
 
  nav ul>li {
    display: inline-block;
-   margin-right: 20px;
+   /*margin-right: 20px;*/
  }
 
  .float-right {
@@ -100,11 +99,11 @@
  }
 
  main {
-   margin: 150px auto;
+   margin: 110px auto;
  }
 
  button {
-   padding: 20px;
+   padding: 10px;
    border: none;
    background-color: #577592;
    color: #ffffff;
@@ -112,7 +111,7 @@
    border-radius: 5px;
    cursor: pointer;
    transition: all 0.3s ease;
-   margin-top: 20px
+   margin-top: 5px
  }
 
  button:hover,
@@ -134,7 +133,7 @@
    width: 100%;
    margin-top: 10px;
    margin-bottom: 10px;
-   padding: 20px;
+   padding: 0px;
    background-color: #D4D8D1;
    font-weight: bold;
  }
@@ -147,12 +146,12 @@
  :checked+span {
    color: #B74934;
    font-weight: bold;
+   /*font-size: 2.5em;*/
  }
 
- /* .quiz-question,
+ /*.quiz-question,
  .quiz-answer {
-   font-size: 20px;
- }*/
+  }*/
 
  .quiz-answer {
    text-align: left;
@@ -165,9 +164,8 @@
    color: #ebca52
  }
 
- .final-score {
-   font-size: small;
- }
+ /*.final-score {
+  }*/
 
  .red-text {
    color: #B74934;
@@ -177,185 +175,69 @@
    text-align: center;
  }
 
- #dialog {
-   background-color: white;
-   border: 10px solid #67655d;
-   color: black;
- }
+ /* The Modal (background) */
 
- .ui-button.ui-corner-all.ui-widget.ui-button-icon-only.ui-dialog-titlebar-close {
-   display: none;
- }
-
- .ui-dialog-title {
-   display: none;
- }
-
- .ui-dialog-titlebar {
-   background: transparent;
-   border: none;
- }
-
- .ui-dialog .ui-dialog-titlebar-close {
-   right: 0;
-=======
- * {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
- }
-
- body {
-   font-family: 'Roboto', sans-serif;
-   color: #67655D;
- }
-
- body:before {
-   background: url('https://static.pexels.com/photos/317346/pexels-photo-317346.jpeg') no-repeat fixed center;
-   background-color: #D4D8D1;
-   background-size: 100%;
-   display: block;
-   content: "";
-   position: absolute;
-   z-index: -1;
-   top: 0;
-   left: 0;
-   right: 0;
-   /*height: 1200px;*/
-   height: 100%;
-   opacity: .3;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
- }
-
- nav,
- footer {
-   overflow: hidden;
-   background-color: #332C2F;
+ .modal {
+   /*display: none; */
+   /* Hidden by default */
    position: fixed;
-   width: 100%;
-   color: white;
-   text-transform: uppercase;
- }
-
- nav {
+   /* Stay in place */
+   z-index: 1;
+   /* Sit on top */
+   left: 0;
    top: 0;
-   height: 90px;
-   font-size: 24px;
-   font-weight: bold;
-   padding: 30px;
- }
-
- footer {
-   bottom: 0;
-   height: 35px;
-   font-size: 12px;
-   padding: 10px 20px;
- }
-
- quiz-title {
-   display: inline-block;
-   margin: 0;
-   padding: 0;
- }
-
- nav ul {
-   list-style: none;
- }
-
- nav ul>li {
-   display: inline-block;
-   margin-right: 20px;
- }
-
- .float-right {
-   float: right;
- }
-
- main {
-   margin: 150px auto;
- }
-
- button {
-   padding: 20px;
-   border: none;
-   background-color: #577592;
-   color: #ffffff;
-   font-size: 18px;
-   text-transform: uppercase;
-   border-radius: 5px;
-   cursor: pointer;
-   transition: all 0.3s ease;
-   margin-top: 20px
- }
-
- button:hover,
- button:focus {
-   background-color: #332c2f;
-   color: #aa9a66
- }
-
-  .quiz-final,
-  .start-screen {
-   margin: 0 auto;
-   text-align: center;
-   font-size: 24px;
    width: 100%;
+   /* Full width */
+   height: 100%;
+   /* Full height */
+   overflow: auto;
+   /* Enable scroll if needed */
+   background-color: rgb(0, 0, 0);
+   /* Fallback color */
+   background-color: rgba(0, 0, 0, 0.4);
+   /* Black w/ opacity */
  }
 
- label {
-   display: block;
-   border: 1px solid black;
-   width: 100%;
-   margin-top: 10px;
-   margin-bottom: 10px;
+ /* Modal Content/Box */
+
+ .modal-content {
+   background-color: #fefefe;
+   margin: 15% auto;
+   /* 15% from the top and centered */
    padding: 20px;
-   background-color: #D4D8D1;
+   border: 1px solid #888;
+   width: 80%;
+   /* Could be more or less, depending on screen size */
+   font-size: 1.5em;
    font-weight: bold;
+ }
+
+ /* The Close Button */
+
+ /*.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
- label:hover,
- label:focus {
-   background-color: wheat;
- }
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}/
 
-:checked+span {
-  color: #B74934;
-  font-weight: bold;
-  font-size: 2.5em;
- }
+.next {
+  float: right;
+  cursor: pointer;
+}
 
- .quiz-question,
- .quiz-answer {
-   font-size: 20px;
- }
 
- .quiz-answer {
-   text-align: left;
-   margin-left: 10px;
- }
 
- .quiz-answer:hover,
- .quiz-answer:focus {
-   background-color: #332C2F;
-   color: #ebca52
- }
- 
- .final-score {
-   font-size: 5em;
- }
 
- .red-text {
-   color: #B74934;
- }
 
- .centerImage {
-   text-align: center;
- }
-
- #dialog {
+/* #dialog {
    background-color: white;
    border: 10px solid #67655d;
    color: black;
@@ -377,5 +259,4 @@
 
  .ui-dialog .ui-dialog-titlebar-close {
    right: 0;
->>>>>>> a6f8f527dcd3c35e227a2f3233687ca21420c629
- }
+ } */
