@@ -33,22 +33,10 @@ function displayDiaglogBox() {
         setDialogText(answerStatus);
 
         //update the number of correct answers and what question the user is on
-        updateQuizCountAndCorrectAnswerCount(answerStatus)
+        updateQuizCountAndCorrectAnswerCount(answerStatus);
 
+        createModal(answerStatus);
 
-        $('.js-quiz').html(
-            `
-            <div id="myModal" class="modal">
-                <div class="modal-content">
-                     ${setDialogText(answerStatus)}
-                     <button class='next'>Next Question</button>
-                </div>
-                <div>
-                    
-                </div>
-            </div>
-            `
-         )
 
         //load correct graphic for correct or incorrect answer
         /*$('#dialog').append(loadDialogGraphics(answerStatus));
@@ -80,6 +68,22 @@ function displayDiaglogBox() {
             }
         }); */
     });
+}
+
+function createModel(answerStatus) {
+    $('.js-quiz').html(
+        `
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                 ${setDialogText(answerStatus)}
+                 <button class='next'>Next Question</button>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+        `
+     )
 }
 
 //update correct number count and what question the user is on count
