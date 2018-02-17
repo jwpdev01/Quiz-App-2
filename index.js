@@ -32,55 +32,35 @@ function displayDiaglogBox() {
         //set dialog text for correct or incorrect answer
         setDialogText(answerStatus);
 
-        //update the number of correct answers and what question the user is on
-        updateQuizCountAndCorrectAnswerCount(answerStatus);
-
         createModal(answerStatus);
 
+        updateQuizCountAndCorrectAnswerCount(answerStatus);
 
-        //load correct graphic for correct or incorrect answer
-        /*$('#dialog').append(loadDialogGraphics(answerStatus));
 
-        //dialog that displays correct and incorrect and navigates to the next step in the workflow.
-        $("#dialog").dialog({
-            resizable: false,
-            height: 600,
-            width: 600,
-            position: {
-                my: "center",
-                at: "center",
-                of: '.js-dialog'
-            },
-            buttons: {
-                "Next Question": function () {
-                    $(this).dialog("close");
+        $('.next').click(function() {
 
-                    if (QUIZSTATE.getQuestionNumber() < QUIZ.length) {
-                        //display next question
-                        renderQuestions();
-                    } else {
-                        //user has gone through all questions
-                        //display results page
-                        $('div.quiz').remove();
-                        createResultPage();
-                    }
-                }
+            if (QUIZSTATE.getQuestionNumber() < QUIZ.length) {
+                //display next question
+                renderQuestions();
+            } else {
+                //user has gone through all questions
+                //display results page
+                $('div.quiz').remove();
+                createResultPage();
             }
-        }); */
+        });        
     });
 }
 
-function createModel(answerStatus) {
+function createModal(answerStatus) {
     $('.js-quiz').html(
         `
         <div id="myModal" class="modal">
             <div class="modal-content">
-                 ${setDialogText(answerStatus)}
-                 <button class='next'>Next Question</button>
-            </div>
-            <div>
-                
-            </div>
+                <p>${loadDialogGraphics(answerStatus)}</p> 
+                <p>${setDialogText(answerStatus)}</p> 
+                <p class='center-btn'><button class='next'>Next</button></p>                
+            </div>    
         </div>
         `
      )
@@ -127,8 +107,8 @@ function renderQuestionAndAnswerText() {
                 </label>   
                              
             </div>
-            <div>
-                <button class='js-check-answer'>Submit Answer</button>
+            <div class='js-submit-btn'>
+                <button class='js-check-answer'>Submit</button>
             </div>
         </form>
     `);
@@ -178,11 +158,6 @@ function setDialogText(answer) {
     }
 
     return dialogText;
-    /*$('.js-dialog').html(`
-        <div id="dialog" title="Basic dialog">
-            <p>${dialogText}</p>
-        </div>`);
-    */
 }
 
 //initate and start the quiz
