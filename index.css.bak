@@ -1,17 +1,15 @@
  * {
    margin: 0;
    padding: 0;
-   box-sizing: border-box;
+   box-sizing: border-box;   
  }
 
  /* Set a base */
-
  html {
-   font-size: 62.5%;
+   font-size: 62.5%
  }
 
  /* iPhone 4 range */
-
  @media (min-width:0px) and (max-width:480px) {
    html {
      font-size: 1.0em;
@@ -25,18 +23,15 @@
    main {
      margin: 20% auto;
    }
+
    button {
-     padding: 10px;
-     margin-top: 10px;
-     width: 100px;
-   }
-   .modal-content {
-    height: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    width: 100px;
    }
  }
 
  /* larger than iPhone landscape, an in the iPad portrait range */
-
  @media (min-width:481px) and (max-width:768px) {
    html {
      font-size: 1.6em;
@@ -45,29 +40,16 @@
      height: 60px;
    }
    main {
-     margin: 90px auto;
+     margin: 10% auto;
    }
    button {
-     padding: 15px;
-     margin-top: 15px;
-     width: 200px;
-   }
-   .js-check-answer,
-   .js-btn-start {
-     font-size: 1.0em;
-   }
-   button.next {
-    padding: 10px;
-    margin-top: 10px;
-    font-size: .8em;
-   }
-   .modal-content {
-    height: 35%;
+    padding: 20px;
+    margin-top: 20px;
+    width: 300px;
    }
  }
 
  /* bigger than iPad portrait  */
-
  @media (min-width:769px) {
    html {
      font-size: 2em;
@@ -78,25 +60,6 @@
    main {
      margin: 10% auto;
    }
-   button {
-    padding: 15px;
-    margin-top: 15px;
-    width: 300px;
-  }
-  .js-check-answer,
-  .js-btn-start,
-  .start-over {
-    font-size: 1.0em;
-  }
-  button.next {
-   padding: 10px;
-   margin-top: 10px;
-   font-size: .8em;
-  }
-  .modal-content {
-   height: 35%;
-  }
-
  }
 
  body {
@@ -176,7 +139,7 @@
    text-transform: uppercase;
    border-radius: 5px;
    cursor: pointer;
-   transition: all 0.3s ease;
+   transition: all 0.3s ease;     
  }
 
  button:hover,
@@ -275,8 +238,7 @@
    /* Could be more or less, depending on screen size */
    font-size: 1.5em;
    font-weight: bold;
-   border-radius: 10px;
-   text-align: center;
+   height: 50%;
  }
 
  /* The Close Button */
@@ -299,10 +261,10 @@
    /*float: right;*/
    cursor: pointer;
    width: 200px;
-   margin: 0 auto;
+  margin: 0 auto;
  }
 
- /*.center-btn {   
+/*.center-btn {   
   width: 200px;
   margin: 0 auto;
 }*/
