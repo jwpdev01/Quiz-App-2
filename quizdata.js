@@ -1,5 +1,5 @@
 const QUIZ = [{
-    question: "Select the valid role for the HTML tag <code>&lt;header&gt; </code>.",
+    question: "Select the valid role for the HTML tag <code>&lt;header&gt;</code>.",
     answers: ['navigation', 'banner', 'main', 'region', 'header'],
     correctAnswer: 'banner',
     category: 'html'
@@ -11,19 +11,19 @@ const QUIZ = [{
     category: 'html'
 },
 {
-    question: "What is a11y the abbreviation for",
+    question: "What is a11y the abbreviation for?",
     answers: ['align', 'ally', 'allliance', 'accessibility'],
     correctAnswer: 'accessibility',
     category: 'html'
 },
 {
-    question: "Which is not a valid value for the CSS property <code>display</code>.",
+    question: "Which is not a valid value for the CSS property <code>display</code>?",
     answers: ['<code>inline</code>', '<code>block</code>', '<code>block-inline</code>', '<code>inline-block</code>'],
     correctAnswer: '<code>block-inline</code>',
     category: 'css'
 },
 {
-    question: "Which is not a valid values for the CSS property <code>position</code>.",
+    question: "Which is not a valid values for the CSS property <code>position</code>?",
     answers: ['<code>static</code>', '<code>fluid</code>', '<code>absolute</code>', '<code>relative</code>'],
     correctAnswer: '<code>fluid</code>',
     category: 'css'
