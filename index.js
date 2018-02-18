@@ -81,35 +81,37 @@ function renderQuestionAndAnswerText() {
 
     $('.js-quiz').html(`
         <form>
-            <div class="quiz-question">
-                <h2>${QUIZ[currentQuestion].question}</h2>
-            </div>
-            <div class="quiz-answers">
-            
-                <label class="answer-label">
-                    <input type="radio" value="${QUIZ[currentQuestion].answers[0]}" name="answer" class="quiz-answer" required checked>
-                    <span class="quiz-answer">${QUIZ[currentQuestion].answers[0]}</span>
-                </label>
+            <fieldset>
+                <div class="quiz-question">
+                    <h2>${QUIZ[currentQuestion].question}</h2>
+                </div>
+                <div class="quiz-answers">
                 
-                <label>
-                    <input type="radio" value="${QUIZ[currentQuestion].answers[1]}" name="answer" class="quiz-answer" required>
-                    <span class="quiz-answer">${QUIZ[currentQuestion].answers[1]}</span>
-                </label>
-                
-                <label>
-                    <input type="radio" value="${QUIZ[currentQuestion].answers[2]}"  name="answer" class="quiz-answer" required>
-                    <span class="quiz-answer" >${QUIZ[currentQuestion].answers[2]}</span>
-                </label>
-                
-                <label>
-                    <input type="radio" value="${QUIZ[currentQuestion].answers[3]}" name="answer" class="quiz-answer" required>
-                    <span class="quiz-answer" >${QUIZ[currentQuestion].answers[3]}</span>
-                </label>   
-                             
-            </div>
-            <div class='js-submit-btn'>
-                <button class='js-check-answer'>Submit</button>
-            </div>
+                    <label class="answer-label">
+                        <input type="radio" value="${QUIZ[currentQuestion].answers[0]}" name="answer" class="quiz-answer" required checked>
+                        <span class="quiz-answer">${QUIZ[currentQuestion].answers[0]}</span>
+                    </label>
+                    
+                    <label>
+                        <input type="radio" value="${QUIZ[currentQuestion].answers[1]}" name="answer" class="quiz-answer" required>
+                        <span class="quiz-answer">${QUIZ[currentQuestion].answers[1]}</span>
+                    </label>
+                    
+                    <label>
+                        <input type="radio" value="${QUIZ[currentQuestion].answers[2]}"  name="answer" class="quiz-answer" required>
+                        <span class="quiz-answer" >${QUIZ[currentQuestion].answers[2]}</span>
+                    </label>
+                    
+                    <label>
+                        <input type="radio" value="${QUIZ[currentQuestion].answers[3]}" name="answer" class="quiz-answer" required>
+                        <span class="quiz-answer" >${QUIZ[currentQuestion].answers[3]}</span>
+                    </label>   
+                                
+                </div>
+                <div class='js-submit-btn'>
+                    <button class='js-check-answer'>Submit</button>
+                </div>
+            </fieldset>
         </form>
     `);
 }
