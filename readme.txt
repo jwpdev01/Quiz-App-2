@@ -1,8 +1,8 @@
 User Story
 
-In choosing my subject for my Quiz App, I wanted to work on something that I can grow and expand as I advance through the course.  One of the challenges I wanted to over come was how could I quiz my self continously on previous and current materials.  I didn't want to have to go through the course or dig through my OneNotes app.
+In choosing my subject for my Quiz App, I wanted to work on something that I can grow and expand as I advance through the course.  One of the challenges I wanted to overcome was how could I quiz my self continuously on previous and current materials.  I didn't want to have to go through the course or dig through my OneNotes app.
 
-Thus I came up with the idea of a Mock Interview Quiz.  This will allow me to continue up the content and exand the design and code as I learn future materials.  As you enter the app, the user will notice on the top right corner the score and what question you are on.
+Thus I came up with the idea of a Mock Interview Quiz.  This will allow me to continue up the content and expand the design and code as I learn future materials.  As you enter the app, the user will notice in the top right corner the score and what question you are on.
 
 
 Functionality

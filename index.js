@@ -82,9 +82,7 @@ function renderQuestionAndAnswerText() {
     $('.js-quiz').html(`
         <form>
             <fieldset>
-                <div class="quiz-question">
-                    <h2>${QUIZ[currentQuestion].question}</h2>
-                </div>
+            <legend class="quiz-question">${QUIZ[currentQuestion].question}</h2></legend></legend>
                 <div class="quiz-answers">
                 
                     <label class="answer-label">
@@ -106,12 +104,12 @@ function renderQuestionAndAnswerText() {
                         <input type="radio" value="${QUIZ[currentQuestion].answers[3]}" name="answer" class="quiz-answer" required>
                         <span class="quiz-answer" >${QUIZ[currentQuestion].answers[3]}</span>
                     </label>   
-                                
+                </fieldset>                      
                 </div>
                 <div class='js-submit-btn'>
                     <button class='js-check-answer'>Submit</button>
                 </div>
-            </fieldset>
+          
         </form>
     `);
 }
@@ -119,9 +117,9 @@ function renderQuestionAndAnswerText() {
 //load appropriate graphic based on correct or incorrect answer.
 function loadDialogGraphics(answerStatus) {
     if (answerStatus === true) {
-        return `<div class='centerImage'><img src="${QUIZSTATE.correctAnswerImage}"/></div>`;
+        return `<div class='centerImage'><img src="${QUIZSTATE.correctAnswerImage}" alt='correct answer'/></div>`;
     } else {
-        return `<div class='centerImage'><img src="${QUIZSTATE.incorrectAnswerImage}"/></div>`;
+        return `<div class='centerImage'><img src="${QUIZSTATE.incorrectAnswerImage}" alt='incorrect answer'/></div>`;
     }
 }
 

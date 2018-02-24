@@ -245,7 +245,8 @@
  }
 
  .red-text {
-   color: #B74934;
+   /*color: #B74934;*/
+   color: red;
  }
 
  .centerImage {
